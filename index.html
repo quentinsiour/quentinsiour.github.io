@@ -1,6 +1,8 @@
 ---
 layout: default
-
+title: Accueil
+group: "navigation"
+visible: "visible"
 ---
         <!-- Page Heading/Breadcrumbs -->
         <div class="row">
@@ -24,7 +26,13 @@ layout: default
                     <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
                 </a>
                 <h3>
-                    <a href="portfolio-item.html">Project One</a>
+                    <ul>
+		  {% for post in site.posts %}
+		    <li>
+		      <a href="{{ post.url }}">{{ post.title }}</a>
+		    </li>
+		  {% endfor %}
+		</ul>
                 </h3>
                 <p>{{site.llorem}}</p>
             </div>

@@ -1,0 +1,11 @@
+---
+layout: default
+title: Billet 1
+group: "billet"
+date: 2014/11/12
+---
+
+<h1 class="page-header">
+	{{site.portefolio}}
+        <small>{{site.author}}</small>
+</h1>

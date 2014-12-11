@@ -1,11 +1,13 @@
 ---
 layout: default
-
+title: Accueil
+group: "navigation"
+visible: "visible"
 ---
         <!-- Page Heading/Breadcrumbs -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">{{site.titre1}}
+                <h1 class="page-header">{{site.portefolio}}
                     <small>{{site.author}}</small>
                 </h1>
                 <ol class="breadcrumb">
@@ -21,6 +23,13 @@ layout: default
         <div class="row">
             <div class="col-md-6 img-portfolio">
                 <a href="portfolio-item.html">
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
                     <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
                 </a>
                 <h3>

@@ -13,17 +13,11 @@
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="about.html">{{site.about}}</a>
-                    </li>
-		    <li>
-                        <a href="index.html">{{site.portefolio}}</a>
-                    </li>
-		    <li>
-                        <a href="contact.html">{{site.contact}}</a>
-                    </li>
-                </ul>
+		<ul class="nav navbar-nav navbar-right">                
+			{% assign pages_list = site.pages %}
+  			{% assign group = 'navigation' %}
+  			{% include pages_list.html %}
+		</ul>	
             </div>
             <!-- /.navbar-collapse -->
         </div>
